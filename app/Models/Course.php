@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Course extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'course_name',
+        'course_description',
+        'course_credit',
+    ];
+
+    // Define relationships if any (e.g., with Enrollment)
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+}
