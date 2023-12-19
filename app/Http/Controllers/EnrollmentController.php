@@ -29,7 +29,7 @@ class EnrollmentController extends Controller
             'enrollment_date' => $request->enrollment_date,
         ]);
     
-        return redirect('/enrollment')->with('info', 'A new enrollment has been added.');
+        return redirect('/enrollment')->with('message', 'A new enrollment has been added.');
     }
     
     public function edit(Enrollment $enrollment)

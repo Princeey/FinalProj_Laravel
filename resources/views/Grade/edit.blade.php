@@ -4,11 +4,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
   <!-- Modal -->
-  <div class="modal fade" id="deletegradeModal" tabindex="-1" aria-labelledby="deletegradeModalLabel" aria-hidden="true">
+  <div class="modal fade" id="deleteGradeModal" tabindex="-1" aria-labelledby="deleteGradeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="deleteUserModalLabel">Delete Grade - {{$grade->enrollment_id}}</h1>
+          <h1 class="modal-title fs-5" id="deleteGradeModalLabel">Delete Grade - {{$grade->enrollment_id}}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="{{url('grade/delete/'.$grade->id)}}" method="POST">
@@ -54,7 +54,7 @@
             </div>
             <div class="form-group my-3 d-grid gap-2 d-md-flex justify-content-end">
                 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteGradeModal">
     Delete Grade
   </button>
                 <button class="btn btn-primary">
